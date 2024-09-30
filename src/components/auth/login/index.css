@@ -1,0 +1,118 @@
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 394p; 
+    color: #4B5563; 
+    padding: 16px;
+    border: 1px solid #E5E7EB; 
+    border-radius: 0.75rem; 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background: #0b3e69;
+}
+
+.form {
+    /* display: flex; */
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.875rem;
+    color: white;
+}
+
+.input {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    color: white; 
+    background: transparent;
+    border: 1px solid #D1D5DB; 
+    border-radius: 0.5rem; 
+    transition: border 0.3s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #6366F1;
+}
+
+.error-message {
+    color: #EF4444; 
+    font-weight: bold;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.5rem 1rem; 
+    color: white;
+    font-weight: 500; 
+    border-radius: 0.5rem; 
+    background-color: #4F46E5; 
+    transition: background 0.3s;
+}
+
+.submit-button:hover:not(.disabled) {
+    background-color: #4338CA; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.disabled {
+    background-color: #D1D5DB;
+    cursor: not-allowed;
+}
+
+.signup-text {
+    text-align: center;
+    font-size: 0.875rem; 
+}
+
+.link {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.line {
+    border-bottom: 2px solid #D1D5DB;
+    flex-grow: 1;
+    margin: 0 0.5rem;
+}
+
+.or-text {
+    font-size: 0.875rem; 
+    font-weight: bold;
+}
+
+/* .google-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem; 
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.3s;
+} */
+
+/* .google-button:hover:not(.disabled) {
+    background-color: #F3F4F6; 
+} */

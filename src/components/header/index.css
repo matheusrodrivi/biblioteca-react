@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 48px;
+    border-bottom: 1px solid;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b3e69;
+  }
+  
+  .navbar button,
+  .navbar a {
+    font-size: 0.875rem;
+    color: #2563eb;
+    text-decoration: underline;
+  }
+  
+  
