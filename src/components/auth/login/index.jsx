@@ -3,6 +3,8 @@ import { Navigate, Link } from 'react-router-dom'
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../firebase/auth'
 import { useAuth } from '../../../context/authContext'
 
+// import google from './googleimage.png'
+
 import './index.css'
 
 const Login = () => {
@@ -38,6 +40,10 @@ const Login = () => {
     
             <main className="main-container">
                 <div className="form-container">
+                <div className="divider-login">
+                    <span className="or-text">LOGIN </span>
+                    <div className="line"></div>
+                    </div>
                     <form onSubmit={onSubmit} className="form">
                         <div className="input-group">
                             <label className="label">Email</label>
@@ -61,12 +67,13 @@ const Login = () => {
                                 onChange={(e) => { setPassword(e.target.value) }}
                                 className="input"
                             />
+                            <p className="signup-text">Não tem uma conta? <Link to={'/register'} className="link">Se cadastre</Link></p>
                         </div>
     
                         {errorMessage && (
                             <span className="error-message">{errorMessage}</span>
                         )}
-    
+
                         <button
                             type="submit"
                             disabled={isSigningIn}
@@ -75,17 +82,17 @@ const Login = () => {
                             {isSigningIn ? 'Signing In...' : 'Sign In'}
                         </button>
                     </form>
-                    <p className="signup-text">Não tem uma conta? <Link to={'/register'} className="link">Se cadastre</Link></p>
-                    {/* <div className="divider">
+                    <div className="divider">
                         <div className="line"></div>
-                        <span className="or-text">OR</span>
+                        <span className="or-text">OU</span>
                         <div className="line"></div>
-                    </div> */}
+                    </div>
                     <button
                         disabled={isSigningIn}
                         onClick={(e) => { onGoogleSignIn(e) }}
                         className={`google-button ${isSigningIn ? 'disabled' : ''}`}>
-                        {/* <svg className="google-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    
+                        {/* <svg className="google-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_17_40)">
                                 <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />
                                 <path d="M24.48 48.0016C30.9529 48.0016 36.4116 45.8764 40.3888 42.2078L32.6549 36.2111C30.5031 37.675 27.7252 38.5039 24.4888 38.5039C18.2275 38.5039 12.9187 34.2798 11.0139 28.6006H3.03296V34.7825C7.10718 42.8868 15.4056 48.0016 24.48 48.0016Z" fill="#34A853" />
@@ -97,8 +104,8 @@ const Login = () => {
                                     <rect width="48" height="48" fill="white" />
                                 </clipPath>
                             </defs>
-                        </svg> */}
-                        {isSigningIn ? 'Signing .' : 'Continue Google'}
+                        </svg>  */}
+                        {/* {isSigningIn ? 'Signing .' : 'Continue Google'} */}
                     </button>
                 </div>
             </main>

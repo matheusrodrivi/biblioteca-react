@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-// import './index.css'
+import './index.css'
 
-const Header = () => {
+const Footer = () => {
     
     return (
         <footer>
-            <p> Oi </p>
+            <p> Biblioteca </p>
         </footer>
       );
       
 }
 
-export default Header
+export default Footer

@@ -9,12 +9,16 @@ const Header = () => {
     const { userLoggedIn } = useAuth()
     
     return (
+      <header className="header">
         <nav className="navbar">
           {
             userLoggedIn
               ?
               <>
                 <button onClick={() => { doSignOut().then(() => { navigate('/login') }) }}>Logout</button>
+                <ul>
+                    <ol className='ol-home'><a href="/">Home</a></ol>
+                </ul>
               </>
               :
               <>
@@ -23,6 +27,8 @@ const Header = () => {
               </>
           }
         </nav>
+      </header>
+
       );
       
 }

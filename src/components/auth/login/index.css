@@ -74,11 +74,13 @@
 
 .signup-text {
     text-align: center;
+    color: white;
     font-size: 0.875rem; 
 }
 
 .link {
     text-decoration: underline;
+    /* color: white; */
     font-weight: bold;
 }
 
@@ -89,30 +91,48 @@
     width: 100%;
 }
 
+.divider-login {
+    display: block;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
 .line {
     border-bottom: 2px solid #D1D5DB;
+    padding-top: 5px;
     flex-grow: 1;
     margin: 0 0.5rem;
 }
 
 .or-text {
     font-size: 0.875rem; 
+    color: white;
     font-weight: bold;
 }
 
-/* .google-button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.625rem;
-    border: 1px solid transparent;
-    border-radius: 0.5rem; 
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: background 0.3s;
+/* .login-text {
+    padding-top: 5px;
 } */
 
-/* .google-button:hover:not(.disabled) {
+/* 
+.google-button {
+    /* width: 100%; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding: 0.625rem; */
+    /* border: 1px solid transparent; */
+    /* border-radius: 0.5rem;  */
+    /* font-size: 0.875rem; */
+    /* font-weight: 500; */
+    /* transition: background 0.3s; */
+/* } */
+
+
+
+.google-button:hover:not(.disabled) {
     background-color: #F3F4F6; 
-} */
+}
