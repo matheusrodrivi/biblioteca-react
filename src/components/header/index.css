@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -7,23 +7,144 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 48px;
-    border-bottom: 1px solid;
+    height: 48px; */
+    /* border-bottom: 1px solid; */
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center;
     background-color: #0b3e69;
     justify-content: space-between;
+  } */
+
+  *::before {
+    margin: 0;
+    box-sizing: border-box;
   }
 
-  .ol-home{
-    padding-right: 10px;
+  html {
+    font-size: 62.5%;
   }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
   
-  .navbar button,
+
+  /* .ol-home{
+    padding-right: 10px;
+  } */
+  
+  /* .navbar button,        
   .navbar a {
     font-size: 0.875rem;
     color: #2563eb;
     text-decoration: underline;
+  } */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: #0b3e69;
+}
+  
+.nav__brand {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background-color: white;
+  transition: 0.4s ease-in;
+}
+
+.nav__toggler {
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+    display: block;
   }
+
+  .nav__menu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    background-color: #0b3e69;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+
+  }
+}
   
-  
+.nav__active {
+  transform: translateX(0);
+  padding-left: 0.5rem;
+
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, 5px);
+}
+
+.dropDownProfile {
+  position: absolute;
+  top: 5.5rem;
+  right: 3rem;
+  width: 110px;
+  /* padding: 15px; */
+  padding-right: 40px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.dropDownProfile::before {
+  content: '';
+  position: absolute;
+  right: 1.1rem;
+  background-color: white;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+.user-interface-img {
+  width: 30px;
+  height: 30px;
+  padding-top: 0.3rem;
+  border-radius: 50%;
+  margin-right: 10px;
+}

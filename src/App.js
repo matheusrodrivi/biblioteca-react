@@ -6,11 +6,13 @@ import Home from "./components/home";
 import Footer from "./components/footer"
 
 import { AuthProvider } from "./context/authContext";
-import { useRoutes } from "react-router-dom";
+import { useRoutes, useLocation } from "react-router-dom";
 
 // import './App.css';
 
 function App() {
+  const location = useLocation();
+
   const routesArray = [
     {
       path: "*",
@@ -32,9 +34,10 @@ function App() {
   let routesElement = useRoutes(routesArray);
   return (
     <AuthProvider>
-      <Header />
+      {location.pathname !== "/login" && location.pathname !== "/register" && <Header />}
+
       <div>{routesElement}</div>
-      <Footer />
+      {location.pathname !== "/login" && location.pathname !== "/register" && <Footer />}
     </AuthProvider>
   );
 }
