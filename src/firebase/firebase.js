@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from 'firebase/firestore';
 
+// CARO HACKER, NÃO USE NOSSAS CREDENCIAIS, POR FAVOR :P
 const firebaseConfig = {
     apiKey: "AIzaSyB1v1ULzb2l1Iau7FgqM25Zu2li3xjp8pk",
     authDomain: "biblioteca-ab73e.firebaseapp.com",
