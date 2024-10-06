@@ -40,11 +40,10 @@ const Header = () => {
                 {/* <ul>
                     <ol className='ol-home'><a href="/">Home</a></ol>
                 </ul> */}
-                <a href='#' className='nav__brand'> Biblioteca </a>
+                <a href='/home' className='nav__brand'> Biblioteca </a>
                 <ul className={active}>
-                  <li className="nav__item"><a href='#' className='nav__link'> Inicio </a> </li>
-                  <li className="nav__item"><a href='#' className='nav__link'> Inicio </a> </li>
-                  <li className="nav__item"><a href='#' className='nav__link'> Inicio </a> </li>
+                  <li className="nav__item"><a href='/home' className='nav__link'>Inicio</a> </li>
+                  <li className="nav__item"><a href='/add-book' className='nav__link'>Registrar livro</a> </li>
                 </ul>
                 <div onClick={navToggle} className={toggleIcon}>
                   <div className='line1'></div>

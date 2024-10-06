@@ -1,0 +1,75 @@
+.container {
+    font-family: Arial, sans-serif;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rem;
+}
+
+  .search-bar {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  .book-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+  .book {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.bookTop {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.bookImage {
+    width: 100%;
+}
+
+#preco {
+    text-align: center;
+    font-size: 1.9rem;
+    color: rgb(190, 31, 31);
+    margin-top: 1rem;
+}
+
+.book:hover {
+    background-color: #e8e8e8;
+}
+
+  .book h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+  .book p {
+    margin: 0;
+    color: #666;
+}
+  @media (max-width: 768px) {
+    .book-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+  @media (max-width: 480px) {
+    .book-list {
+      grid-template-columns: 1fr;
+    }
+}

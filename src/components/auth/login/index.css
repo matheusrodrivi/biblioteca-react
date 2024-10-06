@@ -60,6 +60,7 @@
     border-radius: 0.5rem; 
     background-color: #4F46E5; 
     transition: background 0.3s;
+    border: none;
 }
 
 .submit-button:hover:not(.disabled) {

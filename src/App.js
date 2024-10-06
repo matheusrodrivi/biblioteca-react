@@ -4,6 +4,7 @@ import Register from "./components/auth/register";
 import Header from "./components/header";
 import Home from "./components/home";
 import Footer from "./components/footer"
+import AddBook from "./components/addBook/AddBook";
 
 import { AuthProvider } from "./context/authContext";
 import { useRoutes, useLocation } from "react-router-dom";
@@ -30,6 +31,10 @@ function App() {
       path: "/home",
       element: <Home />,
     },
+    {
+      path: "add-book",
+      element: <AddBook />,
+    }
   ];
   let routesElement = useRoutes(routesArray);
   return (
