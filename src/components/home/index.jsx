@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firebase/firebase';
 import { collection, getDocs } from 'firebase/firestore';
+import { Spinner } from 'phosphor-react';
 import './index.css';
 
 export default function BookSearch() {
   const [searchTerm, setSearchTerm] = useState('');
   const [books, setBooks] = useState([]);
   const [initialBooks, setInitialBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchBooks = async () => {
+      setLoading(true);
       const booksCollection = collection(db, 'livro');
       const booksSnapshot = await getDocs(booksCollection);
       const booksList = booksSnapshot.docs.map(doc => ({
@@ -18,6 +21,7 @@ export default function BookSearch() {
       }));
       setBooks(booksList);
       setInitialBooks(booksList);
+      setLoading(false);
     };
 
     fetchBooks();
@@ -51,18 +55,24 @@ export default function BookSearch() {
         value={searchTerm}
         onChange={handleSearch}
       />
-      <div className="book-list">
-        {books.map(book => (
-          <a key={book.id} className="book" href={`/book/${book.id}`}>
-            <div className='bookTop'>
-                <h3>{book.name}</h3>
-                <p>{book.author}</p>
-                {book.imageUrl && <img className="bookImage" src={book.imageUrl} alt={book.name} />}
-            </div>
-            <p id='preco'>R${' ' + formatPrice(book.price)}</p>
-          </a>
-        ))}
-      </div>
+      {loading ? (
+        <div className='loadingDiv'>
+            <Spinner size={52} />
+        </div>
+      ) : (
+        <div className="book-list">
+          {books.map(book => (
+            <a key={book.id} className="book" href={`/book/${book.id}`}>
+              <div className='bookTop'>
+                  <h3>{book.name}</h3>
+                  <p>{book.author}</p>
+                  {book.imageUrl && <img className="bookImage" src={book.imageUrl} alt={book.name} />}
+              </div>
+              <p id='preco'>R${' ' + formatPrice(book.price)}</p>
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
