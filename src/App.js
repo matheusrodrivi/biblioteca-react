@@ -18,18 +18,18 @@ function App() {
   const routesArray = [
     {
       path: "*",
-      element: <Login />,
+      element: <Home />,
     },
     {
       path: "/login",
-      element: <Login />,
+      element: <Home />,
     },
     {
       path: "/register",
       element: <Register />,
     },
     {
-      path: "/home",
+      path: "*",
       element: <Home />,
     },
     {
@@ -44,10 +44,11 @@ function App() {
   let routesElement = useRoutes(routesArray);
   return (
     <AuthProvider>
-      {location.pathname !== "/login" && location.pathname !== "/register" && <Header />}
-
+      {/* {location.pathname !== "/login" && location.pathname !== "/register" && <Header />} */}
+      <Header />
       <div>{routesElement}</div>
-      {location.pathname !== "/login" && location.pathname !== "/register" && <Footer />}
+      {/* {location.pathname !== "/login" && location.pathname !== "/register" && <Footer />} */}
+      <Footer />
     </AuthProvider>
   );
 }

@@ -9,7 +9,8 @@ import userInterface from './user-interface.png'
 
 const Header = () => {
     const navigate = useNavigate()
-    const { userLoggedIn } = useAuth()
+    // const { userLoggedIn } = useAuth()
+    const userLoggedIn = true
 
     const [active, setActive] = useState('nav__menu')
     const [toggleIcon, setToggleIcon] = useState('nav__toggler');
