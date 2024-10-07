@@ -1,0 +1,115 @@
+.book-rental {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .book-details {
+    flex: 1;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-cover {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .book-author {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .book-price {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .rent-button {
+    border: none;
+    background-color: #154e7c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.4s ease;
+  }
+
+    .rent-button:hover {
+        background-color: rgb(19, 100, 167);
+    }
+  
+  .book-price.unavailable {
+    color: #999;
+  }
+  
+  .rental-list {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .rental-list h3 {
+    margin: 0;
+  }
+  
+  .rental-list h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .rental-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .rental-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .rental-item p {
+    margin: 5px 0;
+  }
+  
+  .rental-price {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .no-rentals {
+    color: #999;
+    font-style: italic;
+  }
+  
+  @media (min-width: 768px) {
+    .book-rental {
+      flex-direction: row;
+      gap: 40px;
+    }
+  
+    .book-details {
+      margin-bottom: 0;
+    }
+  }

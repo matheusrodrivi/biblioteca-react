@@ -9,8 +9,7 @@ import userInterface from './user-interface.png'
 
 const Header = () => {
     const navigate = useNavigate()
-    // const { userLoggedIn } = useAuth() TODO: DESCOMENTAR DEPOIS DE ADICIONAR OS LIVROS
-    const userLoggedIn = true
+    const { userLoggedIn } = useAuth()
 
     const [active, setActive] = useState('nav__menu')
     const [toggleIcon, setToggleIcon] = useState('nav__toggler');
