@@ -40,6 +40,8 @@ export default function Book() {
 
     const handleDevolver = async () => {
         const bookRef = doc(db, 'livro', id);
+        const now = Timestamp.now();
+
         await updateDoc(bookRef, { alugado: false });
         setBook(prevBook => ({ ...prevBook, alugado: false }));
     };
@@ -93,10 +95,10 @@ export default function Book() {
                 )}
             </div>
             <div className="rental-list">
-                <h3>Aluguéis</h3>
+                <h3>Histórico de aluguéis</h3>
                 {rentals.length > 0 ? (
                     <ul>
-                        {rentals.map((rental, index) => (
+                        {rentals.slice().reverse().map((rental, index) => (
                             <li key={index} className="rental-item">
                                 <p><strong>Data de Início:</strong> {rental.dataInicio.toDate().toLocaleDateString()}</p>
                                 <p><strong>Data de Fim:</strong> {rental.dataFim.toDate().toLocaleDateString()}</p>
